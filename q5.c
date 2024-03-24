@@ -48,6 +48,6 @@ int main(void) {
 
 //5:Realiza a mesma função do printf anterior, retorna o endereço de armazenamento de determinado componente do vetor. Porém realiza isto
 //de maneira diferente, utiliza-se de (f + 1) igual ocorre no terceiro printf, mas por não utilizar o 'ponteiro de (*)' não é obtido o conteúdo 
-//e  sim o endereço.
+//e  sim o endereço;
 
-//6: Realiza uma quebra de linha e logo após retorna para o início enquanto o contador for <=4 
+//6: Realiza uma quebra de linha e logo após retorna para o início enquanto o contador for menor igual que 4. 
