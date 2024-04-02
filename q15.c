@@ -6,14 +6,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int compara(const void *a, const void *b){
-    if (*(float*)a == *(float*)b){
+int compara(const void *p1, const void *p2){
+    if (*(float*)p1 == *(float*)p2){
         return 0;
     }
     else{
-        if (*(int*)a < *(int*)b) {
+        if (*(float*)p1 < *(float*)p2) {
             return -1;
-            }
+        }
         else{
             return 1;
         }    
@@ -26,6 +26,7 @@ int main(){
     float *valores;
 
     printf("Quantos valores float serao recebidos?");
+
     scanf("%d", &n);
 
     valores = malloc(n * sizeof(float));
@@ -39,14 +40,12 @@ int main(){
     }
     qsort (valores, n, sizeof(float), compara);
 
-    // Imprime os valores em ordem crescente
     printf("Valores ordenados: \n");
+
     for (int i = 0; i < n; i++) {
         printf("%.2f ", valores[i]);
     }
-    printf("\n");
-
-    // Libera a memória alocada dinamicamente
+    
     free(valores);
 
     return 0;
